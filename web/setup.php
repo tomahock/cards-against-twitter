@@ -11,16 +11,7 @@ require_once '../vendor/autoload.php';
 $black = file_get_contents('../src/Assets/black.txt');
 $white = file_get_contents('../src/Assets/white.txt');
 
-$dsn = "pgsql:"
-   . "host=". DATABASE_HOST .";"
-   . "dbname=". DATABASE_NAME .";"
-   . "user=". DATABASE_USER .";"
-   . "port=". DATABASE_PORT .";"
-   . "sslmode=require;"
-   . "password=" . DATABASE_PW;
-
-
-$db = new PDO( $dsn );
+$db = new PDO( DSN );
 
 $id = 1;
 
