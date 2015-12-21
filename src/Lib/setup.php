@@ -6,7 +6,7 @@
  * Time: 20:48
  */
 
-require_once  __DIR__ . '../bootstrap.php';
+require_once  __DIR__ . '/../bootstrap.php';
 
 $black = file_get_contents('../src/Assets/black.txt');
 $white = file_get_contents('../src/Assets/white.txt');

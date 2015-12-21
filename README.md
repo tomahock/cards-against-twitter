@@ -8,11 +8,11 @@ A Bot that twits random cards against the humanity cards!
 Install the [Heroku Toolbelt](https://toolbelt.heroku.com/).
 
 ```sh
-$ git clone git@github.com:heroku/php-getting-started.git # or clone your own fork
-$ cd php-getting-started
+$ git clone https://github.com/tomahock/cards-against-twitter # or clone your own fork
+$ cd cards-against-twitter
 $ heroku create
 $ git push heroku master
-$ heroku open
+$
 ```
 
 ## Documentation
