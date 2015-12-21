@@ -6,7 +6,7 @@
  * Time: 20:52
  */
 
-require_once '../src/bootstrap.php';
+require_once '../src/autoload.php';
 
 define('DATABASE_NAME', $_SERVER['DATABASE_NAME']);
 define('DATABASE_USER', $_SERVER['DATABASE_USER']);

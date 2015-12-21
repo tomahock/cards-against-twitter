@@ -6,7 +6,7 @@
  * Time: 20:48
  */
 
-require_once '../vendor/autoload.php';
+require_once '../src/bootstrap.php';
 
 $black = file_get_contents('../src/Assets/black.txt');
 $white = file_get_contents('../src/Assets/white.txt');
