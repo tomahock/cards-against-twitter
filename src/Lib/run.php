@@ -6,7 +6,7 @@
  * Time: 20:58
  */
 
-require_once '../bootstrap.php';
+require_once  __DIR__ . '../bootstrap.php';
 
 $db = new PDO(DSN);
 

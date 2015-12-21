@@ -6,7 +6,7 @@
  * Time: 20:52
  */
 
-require_once '../vendor/autoload.php';
+require_once  __DIR__ . '../vendor/autoload.php';
 
 define('DATABASE_NAME', $_SERVER['DATABASE_NAME']);
 define('DATABASE_USER', $_SERVER['DATABASE_USER']);
