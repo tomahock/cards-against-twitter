@@ -5,6 +5,12 @@ A Bot that twitts random cards against the humanity combinations!
 ## Live
 https://twitter.com/cardsAgainstTW
 
+## Why?
+* Wanted to learn about heroku
+* Love Cards Against the Humanity
+* Love Twitter
+* I was bored
+
 ## Deploying
 
 ```sh
