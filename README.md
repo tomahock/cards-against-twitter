@@ -1,11 +1,14 @@
 # Cards Against The Humanity Twitter Bot
 
-A Bot that twits random cards against the humanity cards!
+A Bot that twitts random cards against the humanity combinations!
+
+## Live
+https://twitter.com/cardsAgainstTW
 
 ## Deploying
 
 ```sh
-$ git clone https://github.com/tomahock/cards-against-twitter # or clone your own fork
+$ git clone https://github.com/tomahock/cards-against-twitter
 $ cd cards-against-twitter
 $ heroku create
 $ git push heroku master
@@ -32,8 +35,11 @@ TWITTER_OAUTH_CONSUMER_SECRET
 
 ## Boilerplate / Libs / Cards
 https://cardsagainsthumanity.com/
+
 https://github.com/lumilux/cards-against-humanity
+
 https://github.com/heroku/php-getting-started.git
+
 https://github.com/J7mbo/twitter-api-php
 
 ## Licence
@@ -60,5 +66,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 ___
-Made with ♥ by [Tomahock](https://tomahock.com)
+Made with ♥ by [Tomahock](http://twitter.com/tomahock)
 
