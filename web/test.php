@@ -8,9 +8,6 @@
 
 require_once '../src/bootstrap.php';
 
-$black = file_get_contents('../src/Assets/black.txt');
-$white = file_get_contents('../src/Assets/white.txt');
-
 $db = new PDO(DSN);
 
 $sql = $db->prepare('SELECT * FROM black ORDER BY used DESC');
@@ -20,7 +17,7 @@ $black = $sql->fetchAll();
 
 $sql = $db->prepare('SELECT * FROM white ORDER BY used DESC');
 $sql->execute();
-$black = $sql->fetchAll();
+$white = $sql->fetchAll();
 
 echo '<pre>';
 
