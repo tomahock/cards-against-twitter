@@ -3,12 +3,11 @@
  * Created by PhpStorm.
  * User: tomahock
  * Date: 21/12/15
- * Time: 20:48
+ * Time: 20:58
  */
 
-require_once '../src/bootstrap.php';
+require_once '../bootstrap.php';
 
-use TwitterAPIExchange;
 $db = new PDO(DSN);
 
 $sql = $db->prepare('SELECT * FROM black ORDER BY used ASC');
@@ -20,19 +19,13 @@ $sql = $db->prepare('SELECT * FROM white ORDER BY used ASC');
 $sql->execute();
 $white = $sql->fetchAll();
 
-echo '<pre>';
-
 $i = 0;
 do{
-   echo $white[$i]['text'] . PHP_EOL;
-   echo $black[$i]['text'] . PHP_EOL;
    $str = str_replace('_', $white[$i]['text'], $black[$i]['text'] );
-   echo $str;
-
    if(strlen($str) > 140){
       $i++;
    }
-} while( strlen($str) > 140);
+} while(strlen($str) > 140);
 
 $blackUsed = (int)$black[$i]['used'] + 1;
 $whiteUsed = (int)$white[$i]['used'] + 1;
@@ -47,15 +40,11 @@ $sql->bindParam(1, $whiteUsed);
 $sql->bindParam(2, $white[$i]['id']);
 $sql->execute();
 
-echo 'FINAL: ' . $str;
-//print_r($result);
-
-
 $settings = array(
-   'oauth_access_token' => "4561202261-OxbZM6mNX90W3cJ7krBGJhj9logEDABozMXEJmg",
-   'oauth_access_token_secret' => "YqsWCu4X0C5JN1TJv4PFN64hpDrUj9AruXcdDyAsKUR4c",
-   'consumer_key' => "PH0uzRpiINyBSeHFVu91yFkIX",
-   'consumer_secret' => "iF2PdqiIGXxDHKLnGq0rSQt4By8glZ1292JofjnJZbf60wcGGx"
+   'oauth_access_token' => TWITTER_OAUTH_ACCESS_TOKEN,
+   'oauth_access_token_secret' => TWITTER_OAUTH_ACCESS_TOKEN_SECRET,
+   'consumer_key' => TWITTER_OAUTH_CONSUMER_KEY,
+   'consumer_secret' => TWITTER_OAUTH_CONSUMER_SECRET
 );
 
 $url = 'https://api.twitter.com/1.1/statuses/update.json';

@@ -1,6 +1,6 @@
 {
-  "name": "PHP Getting Started",
-  "description": "A barebones PHP app that makes use of the Silex web framework",
-  "repository": "https://github.com/heroku/php-getting-started",
+  "name": "Cards Against Twitter Bot",
+  "description": "A Bot that twitts random cards against the humanity cards!",
+  "repository": "https://github.com/tomahock/cards-against-twitter",
   "addons": []
 }
