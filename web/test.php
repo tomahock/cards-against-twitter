@@ -23,8 +23,6 @@ echo '<pre>';
 
 $i = 0;
 do{
-   print_r($white);
-
    echo $white[$i]['text'] . PHP_EOL;
    echo $black[$i]['text'] . PHP_EOL;
    $str = str_replace('_', $white[$i]['text'], $black[$i]['text'] );
@@ -35,8 +33,8 @@ do{
    }
 } while( strlen($str) > 160);
 
-$blackUsed = $black[$i]['used']++;
-$whiteUsed = $white[$i]['used']++;
+$blackUsed = (int)$black[$i]['used'] + 1;
+$whiteUsed = (int)$white[$i]['used'] + 1;
 
 $sql = $db->prepare('UPDATE black set used=? WHERE id=?');
 $sql->bindParam(1, $blackUsed);
