@@ -20,7 +20,7 @@ foreach(preg_split("/((\r?\n)|(\r\n?))/", $black) as $line){
 
    $sql->bindParam(1, $line);
 
-   $sql->execute();
+   var_dump($sql->execute());
 }
 
 $id = 1;
