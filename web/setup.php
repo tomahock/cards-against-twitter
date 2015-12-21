@@ -18,11 +18,13 @@ $id = 1;
 foreach(preg_split("/((\r?\n)|(\r\n?))/", $black) as $line){
    $db->prepare('INSERT INTO black(id, text, used) VALUE(?,?,?)');
 
-   $db->exec(array(
+   echo $line . PHP_EOL;
+
+   var_dump($db->exec(array(
       $id,
       $line,
       0
-   ));
+   )));
 
    $id++;
 }

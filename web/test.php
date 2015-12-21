@@ -17,4 +17,4 @@ echo '<pre>';
 
 print_r($_SERVER);
 
-print_r($db->exec('SELECT * FROM black'));
+var_dump($db->exec('SELECT * FROM black'));
