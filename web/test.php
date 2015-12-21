@@ -10,12 +10,12 @@ require_once '../src/bootstrap.php';
 
 $db = new PDO(DSN);
 
-$sql = $db->prepare('SELECT * FROM black ORDER BY used DESC');
+$sql = $db->prepare('SELECT * FROM black ORDER BY used ASC');
 $sql->execute();
 $black = $sql->fetchAll();
 
 
-$sql = $db->prepare('SELECT * FROM white ORDER BY used DESC');
+$sql = $db->prepare('SELECT * FROM white ORDER BY used ASC');
 $sql->execute();
 $white = $sql->fetchAll();
 
