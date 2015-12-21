@@ -6,15 +6,15 @@
  * Time: 20:48
  */
 
-require_once '../vendor/autoload.php';
+require_once '../src/bootstrap.php';
 
 $black = file_get_contents('../src/Assets/black.txt');
 $white = file_get_contents('../src/Assets/white.txt');
 
-//$db = new PDO($_SERVER['DATABASE_URL']);
+$db = new PDO(DSN);
 
 echo '<pre>';
 
 print_r($_SERVER);
 
-//print_r($db->exec('SELECT * FROM black'));
+print_r($db->exec('SELECT * FROM black'));
