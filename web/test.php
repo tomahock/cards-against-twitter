@@ -26,14 +26,18 @@ echo '<pre>';
 
 $i = 0;
 do{
+   print_r($white);
+
    echo $white[$i]['text'] . PHP_EOL;
    echo $black[$i]['text'] . PHP_EOL;
    $str = str_replace('_', $white[$i]['text'], $black[$i]['text'] );
    echo $str;
-   $i++;
+
+   if(strlen($str) > 160){
+      $i++;
+   }
 } while( strlen($str) > 160);
 
-$i--;
 $blackUsed = $black[$i]['used']++;
 $whiteUsed = $white[$i]['used']++;
 
