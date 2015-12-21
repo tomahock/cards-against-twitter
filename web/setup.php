@@ -31,7 +31,7 @@ foreach(preg_split("/((\r?\n)|(\r\n?))/", $black) as $line){
 $id = 1;
 
 foreach(preg_split("/((\r?\n)|(\r\n?))/", $white) as $line){
-   $sql = $db->prepare('INSERT INTO black(text) VALUES(?)');
+   $sql = $db->prepare('INSERT INTO white(text) VALUES(?)');
 
    $sql->bindParam(1, $line);
 
