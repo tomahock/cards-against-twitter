@@ -23,5 +23,3 @@ $dsn = "pgsql:"
    . "password=" . DATABASE_PW;
 
 define('DSN' , $dsn);
-
-var_dump(DSN);

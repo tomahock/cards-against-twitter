@@ -12,8 +12,11 @@ $black = file_get_contents('../src/Assets/black.txt');
 $white = file_get_contents('../src/Assets/white.txt');
 
 $db = new PDO( DSN );
-
+$db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
 $id = 1;
+
+echo '<pre>';
+
 
 foreach(preg_split("/((\r?\n)|(\r\n?))/", $black) as $line){
    $sql = $db->prepare('INSERT INTO black(text) VALUE(?)');
@@ -21,6 +24,8 @@ foreach(preg_split("/((\r?\n)|(\r\n?))/", $black) as $line){
    $sql->bindParam(1, $line);
 
    var_dump($sql->execute());
+
+   var_dump($sql->errorInfo());
 }
 
 $id = 1;
