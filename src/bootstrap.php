@@ -8,6 +8,4 @@
 
 require_once '../vendor/autoload.php';
 
-echo '<pre>';
-print_r($_SERVER);
-die();
+define('DATABASE_NAME', $_SERVER['DATABASE_NAME']);
