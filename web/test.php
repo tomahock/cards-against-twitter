@@ -13,8 +13,10 @@ $white = file_get_contents('../src/Assets/white.txt');
 
 $db = new PDO(DSN);
 
+$sql = $db->prepare('SELECT * FROM black');
+$result = $sql->fetchAll();
+
+
 echo '<pre>';
 
-print_r($_SERVER);
-
-var_dump($db->exec('SELECT * FROM black'));
+print_r($result);
