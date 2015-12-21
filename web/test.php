@@ -13,11 +13,25 @@ $white = file_get_contents('../src/Assets/white.txt');
 
 $db = new PDO(DSN);
 
-$sql = $db->prepare('SELECT * FROM black');
+$sql = $db->prepare('SELECT * FROM black ORDER BY used DESC');
 $sql->execute();
-$result = $sql->fetchAll();
+$black = $sql->fetchAll();
 
+
+$sql = $db->prepare('SELECT * FROM white ORDER BY used DESC');
+$sql->execute();
+$black = $sql->fetchAll();
 
 echo '<pre>';
 
-print_r($result);
+$i = 0;
+do{
+   $str = str_replace('_', $white[$i], $black[$i] );
+   echo $str;
+   $i++;
+} while( strlen($str) > 160);
+
+
+echo 'FINAL: ' . $str;
+//print_r($result);
+
