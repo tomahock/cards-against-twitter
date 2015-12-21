@@ -16,29 +16,19 @@ $db = new PDO( DSN );
 $id = 1;
 
 foreach(preg_split("/((\r?\n)|(\r\n?))/", $black) as $line){
-   $db->prepare('INSERT INTO black(id, text, used) VALUE(?,?,?)');
+   $sql = $db->prepare('INSERT INTO black(text) VALUE(?)');
 
-   echo $line . PHP_EOL;
+   $sql->bindParam(1, $line);
 
-   var_dump($db->exec(array(
-      $id,
-      $line,
-      0
-   )));
-
-   $id++;
+   $sql->execute();
 }
 
 $id = 1;
 
 foreach(preg_split("/((\r?\n)|(\r\n?))/", $white) as $line){
-   $db->prepare('INSERT INTO black(id, text, used) VALUE(?,?,?)');
+   $sql = $db->prepare('INSERT INTO black(text) VALUE(?)');
 
-   $db->exec(array(
-      $id,
-      $line,
-      0
-   ));
+   $sql->bindParam(1, $line);
 
-   $id++;
+   $sql->execute();
 }
