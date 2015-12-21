@@ -26,7 +26,7 @@ echo '<pre>';
 
 $i = 0;
 do{
-   $str = str_replace('_', $white[$i], $black[$i] );
+   $str = str_replace('_', $white[$i]['text'], $black[$i]['text'] );
    echo $str;
    $i++;
 } while( strlen($str) > 160);
