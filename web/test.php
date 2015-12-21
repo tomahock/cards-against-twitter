@@ -29,10 +29,10 @@ do{
    $str = str_replace('_', $white[$i]['text'], $black[$i]['text'] );
    echo $str;
 
-   if(strlen($str) > 160){
+   if(strlen($str) > 140){
       $i++;
    }
-} while( strlen($str) > 160);
+} while( strlen($str) > 140);
 
 $blackUsed = (int)$black[$i]['used'] + 1;
 $whiteUsed = (int)$white[$i]['used'] + 1;
