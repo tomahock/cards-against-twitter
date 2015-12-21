@@ -8,6 +8,7 @@
 
 require_once '../src/bootstrap.php';
 
+use TwitterAPIExchange;
 $db = new PDO(DSN);
 
 $sql = $db->prepare('SELECT * FROM black ORDER BY used ASC');
@@ -48,4 +49,24 @@ $sql->execute();
 
 echo 'FINAL: ' . $str;
 //print_r($result);
+
+
+$settings = array(
+   'oauth_access_token' => "4561202261-OxbZM6mNX90W3cJ7krBGJhj9logEDABozMXEJmg",
+   'oauth_access_token_secret' => "YqsWCu4X0C5JN1TJv4PFN64hpDrUj9AruXcdDyAsKUR4c",
+   'consumer_key' => "PH0uzRpiINyBSeHFVu91yFkIX",
+   'consumer_secret' => "iF2PdqiIGXxDHKLnGq0rSQt4By8glZ1292JofjnJZbf60wcGGx"
+);
+
+$url = 'https://api.twitter.com/1.1/statuses/update.json';
+$requestMethod = 'POST';
+
+$postfields = array(
+   'status' => $str,
+);
+
+$twitter = new TwitterAPIExchange($settings);
+echo $twitter->buildOauth($url, $requestMethod)
+   ->setPostfields($postfields)
+   ->performRequest();
 
