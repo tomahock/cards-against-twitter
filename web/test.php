@@ -14,6 +14,7 @@ $white = file_get_contents('../src/Assets/white.txt');
 $db = new PDO(DSN);
 
 $sql = $db->prepare('SELECT * FROM black');
+$sql->execute();
 $result = $sql->fetchAll();
 
 
