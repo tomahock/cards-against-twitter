@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Cards-against-twitter by tomahock</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/tomahock/cards-against-twitter">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Cards-against-twitter</h1>
+            <h2>A Bot that twitts random cards against the humanity combinations!</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/tomahock/cards-against-twitter/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/tomahock/cards-against-twitter/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
+<a id="cards-against-the-humanity-twitter-bot" class="anchor" href="#cards-against-the-humanity-twitter-bot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cards Against The Humanity Twitter Bot</h1>
+
+<p>A Bot that twitts random cards against the humanity combinations!</p>
+
+<h2>
+<a id="live" class="anchor" href="#live" aria-hidden="true"><span class="octicon octicon-link"></span></a>Live</h2>
+
+<p><a href="https://twitter.com/cardsAgainstTW">https://twitter.com/cardsAgainstTW</a></p>
+
+<h2>
+<a id="why" class="anchor" href="#why" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why?</h2>
+
+<ul>
+<li>Wanted to learn about heroku</li>
+<li>Love Cards Against the Humanity</li>
+<li>Love Twitter</li>
+<li>I was bored</li>
+</ul>
+
+<h2>
+<a id="deploying" class="anchor" href="#deploying" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deploying</h2>
+
+<div class="highlight highlight-source-shell"><pre>$ git clone https://github.com/tomahock/cards-against-twitter
+$ <span class="pl-c1">cd</span> cards-against-twitter
+$ heroku create
+$ git push heroku master
+$ heroku addons:create heroku-postgresql:hobby-dev
+$ heroku run src/Lib/setup.php
+$ heroku addons:add scheduler:standard
+$ heroku addons:open scheduler</pre></div>
+
+<h2>
+<a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configuration</h2>
+
+<h4>
+<a id="heroku-config-variables-self-explanatory" class="anchor" href="#heroku-config-variables-self-explanatory" aria-hidden="true"><span class="octicon octicon-link"></span></a>Heroku Config Variables (self-explanatory!)</h4>
+
+<pre><code>DATABASE_NAME
+DATABASE_USER
+DATABASE_PW
+DATABASE_HOST
+DATABASE_PORT
+TWITTER_OAUTH_ACCESS_TOKEN
+TWITTER_OAUTH_ACCESS_TOKEN_SECRET
+TWITTER_OAUTH_CONSUMER_KEY
+TWITTER_OAUTH_CONSUMER_SECRET
+</code></pre>
+
+<h2>
+<a id="boilerplate--libs--cards" class="anchor" href="#boilerplate--libs--cards" aria-hidden="true"><span class="octicon octicon-link"></span></a>Boilerplate / Libs / Cards</h2>
+
+<p><a href="https://cardsagainsthumanity.com/">https://cardsagainsthumanity.com/</a></p>
+
+<p><a href="https://github.com/lumilux/cards-against-humanity">https://github.com/lumilux/cards-against-humanity</a></p>
+
+<p><a href="https://github.com/heroku/php-getting-started.git">https://github.com/heroku/php-getting-started.git</a></p>
+
+<p><a href="https://github.com/J7mbo/twitter-api-php">https://github.com/J7mbo/twitter-api-php</a></p>
+
+<h2>
+<a id="licence" class="anchor" href="#licence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Licence</h2>
+
+<p>The MIT License</p>
+
+<p>Copyright (c) 2015 Tomahock. <a href="https://tomahock.com">https://tomahock.com</a></p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+
+<hr>
+
+<p>Made with ♥ by <a href="http://twitter.com/tomahock">Tomahock</a></p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/tomahock">tomahock</a> can be found on <a href="https://github.com/tomahock/cards-against-twitter">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
