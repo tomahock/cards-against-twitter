@@ -1,3 +1,5 @@
+[![StyleCI](https://styleci.io/repos/48393831/shield?style=flat)](https://styleci.io/repos/48393831)
+
 # Cards Against The Humanity Twitter Bot
 
 A Bot that twitts random cards against the humanity combinations!
